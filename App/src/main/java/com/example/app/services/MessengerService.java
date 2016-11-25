@@ -17,7 +17,7 @@ public class MessengerService extends Service {
     private static final String HELLO = "hello!";
     private static final String BINDING = "binding";
     // Command to the service to display a message
-    public static final int MSG_SAY_HELLO = 1000;
+    public static final int MSG_DEBUG= 1000;
     public static final int MSG_INITIALIZE_MANAGER = 1001;
     public static final int MSG_DEEPLEARNING_INFERENCE = 1002;
     // Target we publish for clients to send messages to IncomingHandler.
@@ -43,7 +43,7 @@ public class MessengerService extends Service {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
-                case MSG_SAY_HELLO:
+                case MSG_DEBUG:
                     Toast.makeText(MessengerService.this, HELLO, Toast.LENGTH_SHORT).show();
                     break;
                 case MSG_INITIALIZE_MANAGER:
@@ -61,7 +61,7 @@ public class MessengerService extends Service {
                     Log.d(TAG, "MSG_DEEPLEARNING_INFERENCE");
                     inputImagePath = (String) msg.obj;
                     Log.d(TAG, "Analyze input image " + inputImagePath);
-                    inferenceResults = generateFakeResult();
+                    inferenceResults = generateExampleResult();
                     reply = Message.obtain(null, MSG_DEEPLEARNING_INFERENCE, 0, 0);
                     reply.obj = inferenceResults;
                     try {
@@ -76,7 +76,7 @@ public class MessengerService extends Service {
         }
     }
 
-    static HashMap<String, String> generateFakeResult() {
+    static HashMap<String, String> generateExampleResult() {
         HashMap<String, String> result = new HashMap<String, String>();
         result.put("apple", "0.8");
         result.put("banana", "0.15");

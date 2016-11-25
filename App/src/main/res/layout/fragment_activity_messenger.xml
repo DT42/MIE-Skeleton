@@ -5,23 +5,23 @@
     tools:context=".ActivityMessenger$PlaceholderFragment">
 
     <Button
-        android:id="@+id/btnHello"
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onHelloButton"
-        />
-
-    <Button
         android:text="@string/inference"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/btnHello"
-        android:layout_toEndOf="@+id/btnHello"
-        android:layout_marginLeft="17dp"
-        android:layout_marginStart="17dp"
         android:id="@+id/btnInference"
-        android:onClick="onInferenceButton" />
+        android:onClick="onInferenceButton"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/btnSetupMessenger"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnSetupMessenger"
+        android:text="@string/setup_messenger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onSetupMessengerButton"
+        android:layout_marginTop="185dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

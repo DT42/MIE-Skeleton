@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MessengerServiceExample</string>
-    <string name="hello_world">Bind Service</string>
+    <string name="app_name">MIE</string>
+    <string name="setup_messenger">Setup Messenger</string>
     <string name="inference">Run Inference</string>
     <string name="action_settings">Settings</string>
 

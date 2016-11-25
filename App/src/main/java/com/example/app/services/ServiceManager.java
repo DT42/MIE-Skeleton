@@ -14,9 +14,6 @@ import android.util.Log;
 import java.util.Iterator;
 import java.util.Map;
 
-import com.example.app.ActivityMessenger;
-import com.example.app.services.MessengerService;
-
 public class ServiceManager {
     private static final String TAG = ServiceManager.class.getSimpleName();
     private Class<? extends MessengerService> mServiceClass;
@@ -45,7 +42,7 @@ public class ServiceManager {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
-                case MessengerService.MSG_SAY_HELLO:
+                case MessengerService.MSG_DEBUG:
                     Log.d(TAG, "MSG_SAY_HELLO response");
                     break;
                 case MessengerService.MSG_INITIALIZE_MANAGER:
