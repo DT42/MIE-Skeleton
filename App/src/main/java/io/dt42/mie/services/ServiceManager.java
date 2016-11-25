@@ -1,4 +1,4 @@
-package com.example.app.services;
+package io.dt42.mie.services;
 
 import android.content.ComponentName;
 import android.content.Context;

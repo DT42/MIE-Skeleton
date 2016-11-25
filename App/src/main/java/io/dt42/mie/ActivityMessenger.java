@@ -1,4 +1,4 @@
-package com.example.app;
+package io.dt42.mie;
 
 import android.os.Bundle;
 import android.os.RemoteException;
@@ -9,8 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.app.services.MessengerService;
-import com.example.app.services.ServiceManager;
+import io.dt42.mie.services.MessengerService;
+import io.dt42.mie.services.ServiceManager;
 
 public class ActivityMessenger extends FragmentActivity{
     private static final String TAG = ActivityMessenger.class.getSimpleName();
